@@ -1,0 +1,91 @@
+*** Homestore Changelog ***
+
+2018.04.30 - version 2.0.24
+ * Tweak - Storefront 2.3.0 compatibility.
+ * Fix - Consistent site title styling across all pages.
+ * Fix - Post archives margin.
+
+2018.03.26 - version 2.0.23
+ * Fix - Clear single page related products floats.
+
+2018.02.15 - version 2.0.22
+ * Tweak - Compatibility with WooCommerce 3.3.
+ * Fix - Removed cart link pluggable function, it's no longer necessary.
+ * Fix - Removed hardcoded footer bar text color from CSS.
+
+2017.07.03 - version 2.0.21
+ * Fix - Invalid default body color.
+
+2017.06.06 - version 2.0.20
+ * Fix - Remove homepage top padding.
+
+2017.06.01 - version 2.0.19
+ * Fix - Homepage menu display.
+
+2017.04.19 - version 2.0.18
+ * Tweak - WooCommerce 3.0 compatibility tweaks.
+
+2017.02.16 - version 2.0.17
+ * Tweak - Storefront 2.2.0 compatibility.
+
+2017.02.06 - version 2.0.16
+ * Fix - Don't hide table headers.
+
+2017.01.03 - version 2.0.15
+ * Fix - Homepage category margins when displaying more than 4.
+
+2016.12.08 - version 2.0.14
+ * Fix - Compatibility with Storefront Powerpack's sticky header option.
+
+2016.11.14 - version 2.0.13
+ * Fix - First category on the homepage template is no longer hidden on mobile.
+
+2016.11.10 - version 2.0.12
+ * Tweak - Homepage section titles can now be edited via Storefront Powerpack.
+
+2016.08.15 - version 2.0.11
+ * Tweak - Storefront 2.1 compatibility.
+ * Tweak - Storefront Powerpack compatibility.
+
+2016.07.15 - version 2.0.10
+* Fix - Homepage content sections visibility.
+* Fix - Storefront Footer Bar compatibility.
+
+2016.07.07 - version 2.0.9
+ * Fix - Parallax Hero padding at certain screen sizes.
+ * Fix - Parallax Hero title color on handheld devices.
+
+2016.06.27 - version 2.0.8
+ * Fix - Sticky navigation option in Storefront Designer.
+
+2016.05.11 - version 2.0.7
+ * Tweak - Adopt Storefront 2.0's methods for applying default settings.
+ * Fix - Support for WordPress 4.5's custom logo feature.
+
+2016.04.13 - version 2.0.6
+ * Fix - Adds a version number to the product title template.
+
+2016.04.04 - version 2.0.5
+* Fix - Fix compatibility with Storefront Blog Extension.
+* Fix - Fix button colors not being changed from Customizer.
+* Fix - Mobile navigation style fixes.
+
+2016.04.01 - version 2.0.4
+* Fix - Accent color correctly applied to active menu items.
+
+2016.03.17 - version 2.0.3
+ * Fix - Remove duplicate long description from being displayed in single post pages.
+ * Tweak - Storefront 2.0.0 compatibility.
+
+2016.03.09 - version 2.0.2
+ * Fix - Fix static call of `Homestore_Template::section_tabs()`
+
+2016.02.23 - version 2.0.1
+ * Fix - Resetting header image after removing or replacing it.
+
+2016.02.22 - version 2.0.0
+ * New - Underlying code structure rewritten to use a more efficient class structure.
+ * New - Full RTL support.
+
+2016.01.28 - version 1.0.0
+ * Initial release.
