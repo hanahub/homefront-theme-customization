@@ -1,0 +1,33 @@
+{
+  "name": "homefront-theme-customization",
+  "version": "1.0.0",
+  "description": "Homefront WooCommerce Theme customization plugin by CodersClan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/codersclancommunity/myheritage-holiday-shop.git"
+  },
+  "author": "Bishoy A",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/codersclancommunity/myheritage-holiday-shop#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "del": "^3.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-hash": "^4.2.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  }
+}
