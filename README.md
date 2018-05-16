@@ -33,6 +33,8 @@ $ gulp
 ```
 
 ### Sources vs Destinations
+
+| Directory | Note |
 | ------ | ------ |
 | `assets/src/sass` | Put your .scss files there. |
 | `assets/src/js/scripts.js` | Put your JS code there. |
