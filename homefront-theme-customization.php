@@ -202,12 +202,14 @@ final class Theme_Customisations {
 	 * @return void
 	 */
 	function accessories_products( $args ) {
+            		$id = 17;
+            		$term = get_term_by( 'id', $id, 'product_cat' );
 			$args = apply_filters( 'storefront_product_category_args', array(
 				'limit' 			=> 12,
 				'columns' 			=> 4,
 				'orderby' 			=> 'name',
-				'category'          => 'accessories',
-				'title'				=> __( 'Accessories', 'storefront' ),
+				'category'          		=> $term->name,
+				'title'				=> __( $term->name, 'storefront' ),
 			) );
 
 			$shortcode_content = storefront_do_shortcode( 'product_category', apply_filters( 'storefront_product_category_shortcode_args', array(
