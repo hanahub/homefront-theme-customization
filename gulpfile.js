@@ -77,7 +77,7 @@ gulp.task('scripts', function(){
 
 // Watchers
 gulp.task('watch', function() {
-  gulp.watch('assets/src/scss/**/*.scss', ['styles']);
+  gulp.watch('assets/src/sass/**/*.scss', ['styles']);
   gulp.watch('templates/*.php', browserSync.reload);
   gulp.watch('assets/src/js/**/*.js', browserSync.reload);
 })
