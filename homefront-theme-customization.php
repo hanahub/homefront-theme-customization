@@ -208,7 +208,7 @@ final class Theme_Customisations {
 				'limit' 			=> 12,
 				'columns' 			=> 4,
 				'orderby' 			=> 'name',
-				'category'          		=> $term->name,
+				'category'          		=> $term->slug,
 				'title'				=> __( $term->name, 'storefront' ),
 			) );
 
