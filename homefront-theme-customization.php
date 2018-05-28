@@ -43,6 +43,8 @@ final class Theme_Customisations {
 		add_action( 'wp_enqueue_scripts', array( $this, 'vendor_assets' ) );
 		add_filter( 'template_include',   array( $this, 'theme_customisations_template' ), 11 );
 		add_filter( 'wc_get_template',    array( $this, 'theme_customisations_wc_get_template' ), 11, 5 );
+		add_action( 'homepage', array( $this, 'dna_product_categories'),    80 );
+		add_action( 'homepage', array( $this, 'accessories_products'),    90 );
 	}
 
 	/**
@@ -142,6 +144,98 @@ final class Theme_Customisations {
 
 			    wp_enqueue_style( $name, plugins_url( '/assets/dist/css/' . $fullName, __FILE__ ), array(), null );
 			}
+		}
+	}
+	
+	/**
+	 * Display DNA Sub Categories
+	 * Hooked into the `homepage` action in the homepage template
+	 *
+	 * @since  1.0.0
+	 * @param array $args the product section args.
+	 * @return void
+	 */
+	function dna_product_categories( $args ) {
+			$args = apply_filters( 'storefront_product_categories_args', array(
+				'limit' 			=> 9,
+				'columns' 			=> 3,
+				'child_categories' 	=> 16,
+				'orderby' 			=> 'name',
+				'title'				=> __( 'DNA', 'storefront' ),
+			) );
+
+			$shortcode_content = storefront_do_shortcode( 'product_categories', apply_filters( 'storefront_product_categories_shortcode_args', array(
+				'number'  => intval( $args['limit'] ),
+				'columns' => intval( $args['columns'] ),
+				'orderby' => esc_attr( $args['orderby'] ),
+				'parent'  => esc_attr( $args['child_categories'] ),
+			) ) );
+
+			/**
+			 * Only display the section if the shortcode returns product categories
+			 */
+			if ( false !== strpos( $shortcode_content, 'product-category' ) ) {
+
+				echo '<section class="storefront-product-section storefront-product-categories" aria-label="' . esc_attr__( 'Product Categories', 'storefront' ) . '">';
+
+				do_action( 'storefront_homepage_before_product_categories' );
+
+				echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+
+				do_action( 'storefront_homepage_after_product_categories_title' );
+
+				echo $shortcode_content;
+
+				do_action( 'storefront_homepage_after_product_categories' );
+
+				echo '</section>';
+
+			}
+		}
+		
+    /**
+	 * Display All products in the Accessories category
+	 * Hooked into the `homepage` action in the homepage template
+	 *
+	 * @since  1.0.0
+	 * @param array $args the product section args.
+	 * @return void
+	 */
+	function accessories_products( $args ) {
+			$args = apply_filters( 'storefront_product_category_args', array(
+				'limit' 			=> 12,
+				'columns' 			=> 4,
+				'orderby' 			=> 'name',
+				'category'          => 'accessories',
+				'title'				=> __( 'Accessories', 'storefront' ),
+			) );
+
+			$shortcode_content = storefront_do_shortcode( 'product_category', apply_filters( 'storefront_product_category_shortcode_args', array(
+				'number'  => intval( $args['limit'] ),
+				'columns' => intval( $args['columns'] ),
+				'orderby' => esc_attr( $args['orderby'] ),
+				'category'  => esc_attr( $args['category'] ),
+			) ) );
+
+			/**
+			 * Only display the section if the shortcode returns products
+			 */
+			 error_log(print_r($shortcode_content,true));
+			if ( false !== strpos( $shortcode_content, 'product' ) ) {
+
+				echo '<section class="storefront-product-section" aria-label="' . esc_attr__( 'Accessories Products', 'storefront' ) . '">';
+
+				do_action( 'storefront_homepage_before_product_category' );
+
+				echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+
+				do_action( 'storefront_homepage_after_product_category_title' );
+
+				echo $shortcode_content;
+
+				do_action( 'storefront_homepage_after_product_category' );
+
+				echo '</section>';
 
 		}
 	}
