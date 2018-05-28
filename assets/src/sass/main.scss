@@ -11,10 +11,17 @@
 @import "page/homepage";
 
 @import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700');
+
 .site-header .site-branding h1 a, .site-header .site-branding .site-title a {
   font-family: Bitter,serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0px;
+  color: #e56b30 !important;
+}
+.site-content {  
+  .storefront-product-sharing ul li a:before {
+    font-family: FontAwesome;
+  }
 }

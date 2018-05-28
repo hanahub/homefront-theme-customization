@@ -53,6 +53,8 @@ final class Theme_Customisations {
 	 */
 	public function vendor_assets() {
 		// wp_enqueue_script( 'vendor-script', plugins_url( '/assets/dist/vendor/js/scripts.js', __FILE__ ), array(), null, true );
+		
+		wp_enqueue_style( 'fontawesome', plugins_url( '/assets/vendor/fontawesome-4.7.0/css/font-awesome.min.css', __FILE__ ), array(), null );
 	}
 
 	/**
