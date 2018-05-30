@@ -13,11 +13,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700');
 
 body, button, h1, h2, h3, h4, h5, h6, input, select, textarea,
-.single-product div.product .entry-title.product_title {
-  font-family: Bitter, serif;
+.single-product div.product .entry-title.product_title,
+body:not(.sd-custom-font-scheme) .hentry .entry-header h1.entry-title,
+h1.page-title {
+  font-family: Bitter, serif !important;
 }
 body.custom-background {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 ul.products li.product.product-category h2, ul.products li.product.product-category .woocommerce-loop-category__title {
   position: relative;
@@ -30,7 +32,7 @@ ul.products li.product.product-category h2, ul.products li.product.product-categ
   line-height: 1.2;
   letter-spacing: 0px;
 }
-.site-content {  
+.site-content {
   .storefront-product-sharing ul li a:before {
     font-family: FontAwesome;
   }
