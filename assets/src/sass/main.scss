@@ -12,8 +12,19 @@
 
 @import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700');
 
+body, button, h1, h2, h3, h4, h5, h6, input, select, textarea,
+.single-product div.product .entry-title.product_title {
+  font-family: Bitter, serif;
+}
+body.custom-background {
+  background-color: #fff;
+}
+ul.products li.product.product-category h2, ul.products li.product.product-category .woocommerce-loop-category__title {
+  position: relative;
+  bottom: 0px;
+}
 .site-header .site-branding h1 a, .site-header .site-branding .site-title a {
-  font-family: Bitter,serif;
+  font-family: Bitter, serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 1.2;
