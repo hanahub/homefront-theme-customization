@@ -14,8 +14,9 @@
 
 body, button, h1, h2, h3, h4, h5, h6, input, select, textarea,
 .single-product div.product .entry-title.product_title,
-body:not(.sd-custom-font-scheme) .hentry .entry-header h1.entry-title {
-  font-family: Bitter, serif;
+body:not(.sd-custom-font-scheme) .hentry .entry-header h1.entry-title,
+h1.page-title {
+  font-family: Bitter, serif !important;
 }
 body.custom-background {
   background-color: #fff !important;
