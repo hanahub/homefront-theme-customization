@@ -17,7 +17,7 @@ body, button, h1, h2, h3, h4, h5, h6, input, select, textarea,
   font-family: Bitter, serif;
 }
 body.custom-background {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 ul.products li.product.product-category h2, ul.products li.product.product-category .woocommerce-loop-category__title {
   position: relative;
@@ -31,7 +31,7 @@ ul.products li.product.product-category h2, ul.products li.product.product-categ
   letter-spacing: 0px;
   color: #e56b30 !important;
 }
-.site-content {  
+.site-content {
   .storefront-product-sharing ul li a:before {
     font-family: FontAwesome;
   }
